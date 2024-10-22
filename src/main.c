@@ -3,6 +3,7 @@
 #include "arvore.h"
 #include "compressao.h"
 #include "descompressao.h"
+#include <string.h>
 
 #define MAX 100
 

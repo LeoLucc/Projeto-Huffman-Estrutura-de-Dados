@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include "lista.h"
 #include "arvore.h"
-#include "descompressao.h"
 
 /**
  * @brief Obtém o tamanho do lixo do arquivo compactado.

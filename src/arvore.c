@@ -1,12 +1,7 @@
 #include <stdio.h>
-#include "lista.h"
-#include "arvore.h"
 #include <stdbool.h>
-
-bool ehFolha(node_t **head)
-{
-    return (*head)->left == NULL && (*head)->right == NULL;
-}
+#include "arvore.h"
+#include "lista.h"
 
 /*
     monta a árvore de huffman com a lista ordenada
@@ -29,6 +24,11 @@ node_t *arvoreHuff(node_t **head, int *tamLista)
     }
 
     return Pai;
+}
+
+bool ehFolha(node_t **head)
+{
+    return (*head)->left == NULL && (*head)->right == NULL;
 }
 /*
     acha o tamanho da árvore

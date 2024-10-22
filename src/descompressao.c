@@ -92,7 +92,7 @@ node_t *montar_arvore(FILE *archive, short int *treeSize)
 int verificar_bit_i(unsigned char c, int i)
 {
     unsigned char mask = 1 << i;
-    return mask & c;
+    return (mask & c) ? 1 : 0; // Retorna 1 se o bit estiver definido, 0 caso contrário
 }
 
 /*

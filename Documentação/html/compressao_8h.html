@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Documentação Huffman: Referência do Arquivo C:/msys64/home/LeoLu/teste/Huffman/inc/compressao.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Documentação Huffman<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bbaa3e6d145be87c8a5363514d5fd13f.html">msys64</a></li><li class="navelem"><a class="el" href="dir_f8c7842ae88a1005d8e6113798ab7066.html">home</a></li><li class="navelem"><a class="el" href="dir_645df0efc2dfbca8d83a54f47071ba3c.html">LeoLu</a></li><li class="navelem"><a class="el" href="dir_f89e6911f68dcfef30dfbc337b4ba7e1.html">teste</a></li><li class="navelem"><a class="el" href="dir_f7c2d3c55582dd191112985b65326b04.html">Huffman</a></li><li class="navelem"><a class="el" href="dir_c97b5085d01cb0388d045c9cc1be38f7.html">inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle"><div class="title">Referência do Arquivo compressao.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="lista_8h_source.html">lista.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="arvore_8h_source.html">arvore.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="compressao_8h_source.html">compressao.h</a>&quot;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+</div>
+<p><a href="compressao_8h_source.html">Ir para o código-fonte desse arquivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:aac7a9222ff3ad6b9fb628930b57839c8" id="r_aac7a9222ff3ad6b9fb628930b57839c8"><td class="memItemLeft" align="right" valign="top">unsigned long long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac7a9222ff3ad6b9fb628930b57839c8">calcularTamanho</a> (FILE *arquivo)</td></tr>
+<tr class="memdesc:aac7a9222ff3ad6b9fb628930b57839c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula o tamanho de um arquivo.  <br /></td></tr>
+<tr class="separator:aac7a9222ff3ad6b9fb628930b57839c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae97a94e4c913b262271cd5f310e28252" id="r_ae97a94e4c913b262271cd5f310e28252"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae97a94e4c913b262271cd5f310e28252">mapearBytesParaCodigos</a> (node_t *tree_node, BitHuff table[], BitHuff codigo_parafolha)</td></tr>
+<tr class="memdesc:ae97a94e4c913b262271cd5f310e28252"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mapeia os bytes da árvore de Huffman para seus respectivos códigos.  <br /></td></tr>
+<tr class="separator:ae97a94e4c913b262271cd5f310e28252"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af58274a0fb83866acd61a3553c0ebd3e" id="r_af58274a0fb83866acd61a3553c0ebd3e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af58274a0fb83866acd61a3553c0ebd3e">tamanho_lixo</a> (int frequency[], BitHuff table[])</td></tr>
+<tr class="memdesc:af58274a0fb83866acd61a3553c0ebd3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula o tamanho do "lixo" após a compressão.  <br /></td></tr>
+<tr class="separator:af58274a0fb83866acd61a3553c0ebd3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a456f0b4b703a7d92e914f34793bca8a6" id="r_a456f0b4b703a7d92e914f34793bca8a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a456f0b4b703a7d92e914f34793bca8a6">escrever_no_Cabecalho_Arquivo_compac</a> (FILE *file, int trashSize, int treeSize)</td></tr>
+<tr class="memdesc:a456f0b4b703a7d92e914f34793bca8a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escreve o cabeçalho no arquivo compactado.  <br /></td></tr>
+<tr class="separator:a456f0b4b703a7d92e914f34793bca8a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae412d0c344c7967d3c36cdc9b84b4bd8" id="r_ae412d0c344c7967d3c36cdc9b84b4bd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae412d0c344c7967d3c36cdc9b84b4bd8">escrever_arvore</a> (FILE *file, node_t *arvore_b)</td></tr>
+<tr class="memdesc:ae412d0c344c7967d3c36cdc9b84b4bd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escreve a estrutura da árvore de Huffman no arquivo compactado.  <br /></td></tr>
+<tr class="separator:ae412d0c344c7967d3c36cdc9b84b4bd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97c9b20d69797dab1594854347c7182a" id="r_a97c9b20d69797dab1594854347c7182a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97c9b20d69797dab1594854347c7182a">gravarCodigos</a> (FILE *fileIn, FILE *fileOut, BitHuff table[], int trashSize)</td></tr>
+<tr class="memdesc:a97c9b20d69797dab1594854347c7182a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grava os códigos compactados no arquivo de saída.  <br /></td></tr>
+<tr class="separator:a97c9b20d69797dab1594854347c7182a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Funções</h2>
+<a id="aac7a9222ff3ad6b9fb628930b57839c8" name="aac7a9222ff3ad6b9fb628930b57839c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac7a9222ff3ad6b9fb628930b57839c8">&#9670;&#160;</a></span>calcularTamanho()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long long int calcularTamanho </td>
+          <td>(</td>
+          <td class="paramtype">FILE *</td>          <td class="paramname"><span class="paramname"><em>arquivo</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcula o tamanho de um arquivo. </p>
+<p>Esta função determina o tamanho de um arquivo em bytes, movendo o ponteiro de arquivo para o final e retornando a posição atual.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arquivo</td><td>Ponteiro para o arquivo a ser lido. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Tamanho do arquivo em bytes. </dd></dl>
+
+</div>
+</div>
+<a id="ae412d0c344c7967d3c36cdc9b84b4bd8" name="ae412d0c344c7967d3c36cdc9b84b4bd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae412d0c344c7967d3c36cdc9b84b4bd8">&#9670;&#160;</a></span>escrever_arvore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void escrever_arvore </td>
+          <td>(</td>
+          <td class="paramtype">FILE *</td>          <td class="paramname"><span class="paramname"><em>file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">node_t *</td>          <td class="paramname"><span class="paramname"><em>arvore_b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Escreve a estrutura da árvore de Huffman no arquivo compactado. </p>
+<p>Esta função grava a estrutura da árvore de Huffman no arquivo, garantindo que ela possa ser reconstruída durante a descompressão.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>Ponteiro para o arquivo onde a árvore será escrita. </td></tr>
+    <tr><td class="paramname">arvore_b</td><td>Ponteiro para a raiz da árvore de Huffman. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a456f0b4b703a7d92e914f34793bca8a6" name="a456f0b4b703a7d92e914f34793bca8a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a456f0b4b703a7d92e914f34793bca8a6">&#9670;&#160;</a></span>escrever_no_Cabecalho_Arquivo_compac()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void escrever_no_Cabecalho_Arquivo_compac </td>
+          <td>(</td>
+          <td class="paramtype">FILE *</td>          <td class="paramname"><span class="paramname"><em>file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>trashSize</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>treeSize</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Escreve o cabeçalho no arquivo compactado. </p>
+<p>Esta função escreve os dois primeiros bytes no arquivo compactado, que armazenam o tamanho do lixo e da árvore.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>Ponteiro para o arquivo onde os dados serão escritos. </td></tr>
+    <tr><td class="paramname">trashSize</td><td>Tamanho do lixo em bits. </td></tr>
+    <tr><td class="paramname">treeSize</td><td>Tamanho da árvore de Huffman em bits. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a97c9b20d69797dab1594854347c7182a" name="a97c9b20d69797dab1594854347c7182a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97c9b20d69797dab1594854347c7182a">&#9670;&#160;</a></span>gravarCodigos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gravarCodigos </td>
+          <td>(</td>
+          <td class="paramtype">FILE *</td>          <td class="paramname"><span class="paramname"><em>fileIn</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *</td>          <td class="paramname"><span class="paramname"><em>fileOut</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BitHuff</td>          <td class="paramname"><span class="paramname"><em>table</em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>trashSize</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Grava os códigos compactados no arquivo de saída. </p>
+<p>Esta função lê o arquivo de entrada byte por byte, converte cada byte em seu código correspondente de Huffman e grava esses códigos compactados no arquivo de saída.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileIn</td><td>Ponteiro para o arquivo de entrada. </td></tr>
+    <tr><td class="paramname">fileOut</td><td>Ponteiro para o arquivo de saída. </td></tr>
+    <tr><td class="paramname">table</td><td>Tabela de códigos Huffman. </td></tr>
+    <tr><td class="paramname">trashSize</td><td>Tamanho do lixo em bits. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae97a94e4c913b262271cd5f310e28252" name="ae97a94e4c913b262271cd5f310e28252"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae97a94e4c913b262271cd5f310e28252">&#9670;&#160;</a></span>mapearBytesParaCodigos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mapearBytesParaCodigos </td>
+          <td>(</td>
+          <td class="paramtype">node_t *</td>          <td class="paramname"><span class="paramname"><em>tree_node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BitHuff</td>          <td class="paramname"><span class="paramname"><em>table</em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BitHuff</td>          <td class="paramname"><span class="paramname"><em>codigo_parafolha</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mapeia os bytes da árvore de Huffman para seus respectivos códigos. </p>
+<p>Esta função percorre a árvore de Huffman e associa cada byte a um código binário, armazenando essas associações em uma tabela.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tree_node</td><td>Ponteiro para o nó da árvore atual. </td></tr>
+    <tr><td class="paramname">table</td><td>Tabela que armazena os códigos Huffman. </td></tr>
+    <tr><td class="paramname">codigo_parafolha</td><td>Código acumulado para o nó atual. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af58274a0fb83866acd61a3553c0ebd3e" name="af58274a0fb83866acd61a3553c0ebd3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af58274a0fb83866acd61a3553c0ebd3e">&#9670;&#160;</a></span>tamanho_lixo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int tamanho_lixo </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>frequency</em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BitHuff</td>          <td class="paramname"><span class="paramname"><em>table</em></span>[]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcula o tamanho do "lixo" após a compressão. </p>
+<p>Esta função calcula quantos bits não foram utilizados no último byte após a compressão, com base na frequência dos bytes e na tabela de códigos Huffman.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frequency</td><td>Array contendo as frequências dos bytes. </td></tr>
+    <tr><td class="paramname">table</td><td>Tabela de códigos Huffman. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Número de bits que não foram utilizados no último byte. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

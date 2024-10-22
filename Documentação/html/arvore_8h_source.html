@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Documentação Huffman: Código-Fonte de C:/msys64/home/LeoLu/teste/Huffman/inc/arvore.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Documentação Huffman<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bbaa3e6d145be87c8a5363514d5fd13f.html">msys64</a></li><li class="navelem"><a class="el" href="dir_f8c7842ae88a1005d8e6113798ab7066.html">home</a></li><li class="navelem"><a class="el" href="dir_645df0efc2dfbca8d83a54f47071ba3c.html">LeoLu</a></li><li class="navelem"><a class="el" href="dir_f89e6911f68dcfef30dfbc337b4ba7e1.html">teste</a></li><li class="navelem"><a class="el" href="dir_f7c2d3c55582dd191112985b65326b04.html">Huffman</a></li><li class="navelem"><a class="el" href="dir_c97b5085d01cb0388d045c9cc1be38f7.html">inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">arvore.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="arvore_8h.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef TREE_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define TREE_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="arvore_8h.html">arvore.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="lista_8h.html">lista.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="arvore_8h.html#a12b6e0b9f9f8d0deb1367970b2988afa">   18</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="arvore_8h.html#a12b6e0b9f9f8d0deb1367970b2988afa">ehFolha</a>(node_t **head);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="arvore_8h.html#a1e9652a5484a98481256b43a9fa15a22">   33</a></span>node_t *<a class="code hl_function" href="arvore_8h.html#a1e9652a5484a98481256b43a9fa15a22">arvoreHuff</a>(node_t **head, <span class="keywordtype">int</span> *tamLista);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="arvore_8h.html#a21d10c6fa6af082074e1216e224d29e5">   45</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="arvore_8h.html#a21d10c6fa6af082074e1216e224d29e5">tamanhoArvore</a>(node_t *no);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#endif </span><span class="comment">// TREE_H</span></div>
+<div class="ttc" id="aarvore_8h_html"><div class="ttname"><a href="arvore_8h.html">arvore.h</a></div></div>
+<div class="ttc" id="aarvore_8h_html_a12b6e0b9f9f8d0deb1367970b2988afa"><div class="ttname"><a href="arvore_8h.html#a12b6e0b9f9f8d0deb1367970b2988afa">ehFolha</a></div><div class="ttdeci">bool ehFolha(node_t **head)</div><div class="ttdoc">Verifica se um nó é uma folha da árvore.</div></div>
+<div class="ttc" id="aarvore_8h_html_a1e9652a5484a98481256b43a9fa15a22"><div class="ttname"><a href="arvore_8h.html#a1e9652a5484a98481256b43a9fa15a22">arvoreHuff</a></div><div class="ttdeci">node_t * arvoreHuff(node_t **head, int *tamLista)</div><div class="ttdoc">Monta a árvore de Huffman a partir de uma lista ordenada.</div></div>
+<div class="ttc" id="aarvore_8h_html_a21d10c6fa6af082074e1216e224d29e5"><div class="ttname"><a href="arvore_8h.html#a21d10c6fa6af082074e1216e224d29e5">tamanhoArvore</a></div><div class="ttdeci">int tamanhoArvore(node_t *no)</div><div class="ttdoc">Calcula o tamanho da árvore.</div></div>
+<div class="ttc" id="alista_8h_html"><div class="ttname"><a href="lista_8h.html">lista.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

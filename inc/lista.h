@@ -3,6 +3,15 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "lista.h"
+typedef struct node
+{
+  char byte;          // Caractere do arquivo que será compactado/descompactado
+  int freq;           // A frequência que o caractere aparece no arquivo
+  struct node *left;  // Nó filho esquerdo
+  struct node *right; // Nó filho direito
+  struct node *prox;  // Próximo nó na lista encadeada
+} node_t;
 
 /**
  * @brief Cria uma lista encadeada vazia.

@@ -4,8 +4,13 @@
 #include <stdio.h>
 #include "lista.h"
 #include "arvore.h"
-#include "compressao.h"
 #include <stdint.h>
+
+typedef struct bithuff
+{
+  int bitH;
+  int size;
+} BitHuff;
 
 /**
  * @brief Calcula o tamanho de um arquivo.
