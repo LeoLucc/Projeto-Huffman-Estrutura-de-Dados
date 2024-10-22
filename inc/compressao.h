@@ -1,71 +1,84 @@
+#ifndef COMPRESSAO_H
+#define COMPRESSAO_H
+
+#include <stdio.h>
 #include "lista.h"
 #include "arvore.h"
-#include <string.h>
-#include <stdlib.h>
+#include "compressao.h"
+#include <stdint.h>
 
-#ifndef ENCODE_H
-#define ENDODE_H
+/**
+ * @brief Calcula o tamanho de um arquivo.
+ *
+ * Esta função determina o tamanho de um arquivo em bytes,
+ * movendo o ponteiro de arquivo para o final e retornando
+ * a posição atual.
+ *
+ * @param arquivo Ponteiro para o arquivo a ser lido.
+ * @return Tamanho do arquivo em bytes.
+ */
+unsigned long long int calcularTamanho(FILE *arquivo);
 
-typedef struct bithuff
-{
-    int bitH;
-    int size;
-} BitHuff;
 /**
- * @brief Pega o tamanho de um árquivo
+ * @brief Mapeia os bytes da árvore de Huffman para seus respectivos códigos.
  *
- * @param archive: O ponteiro que aponta para o Arquivo
- * @return O tamanho do arquivo em bytes na maior variável do c unsigne long long int
+ * Esta função percorre a árvore de Huffman e associa cada byte
+ * a um código binário, armazenando essas associações em uma tabela.
+ *
+ * @param tree_node Ponteiro para o nó da árvore atual.
+ * @param table Tabela que armazena os códigos Huffman.
+ * @param codigo_parafolha Código acumulado para o nó atual.
  */
-unsigned long long int calcularTamanho(FILE *archive);
+void mapearBytesParaCodigos(node_t *tree_node, BitHuff table[], BitHuff codigo_parafolha);
+
 /**
- * @brief Montar a Tabela que vai conter as informações dos bit que vão representar os caracteres(bits de Huffman)
+ * @brief Calcula o tamanho do "lixo" após a compressão.
  *
- * @param tree_node: A raiz da árvore de Huffman
- * @param table: A tabela do que vai conter as informações dos bit de Huffman
- * @param code: A variável que vai armazenar os bits de Huffman e seu tamanho até chegar em um nó folha
- */
-void mapearBytesParaCodigos(node_t *tree_node, BitHuff table[], BitHuff code);
-/**
- * @brief Retorna o tamanho do lixo no final do árquivo
+ * Esta função calcula quantos bits não foram utilizados no último byte
+ * após a compressão, com base na frequência dos bytes e na tabela de
+ * códigos Huffman.
  *
- * @param frequency: Uma tabela com a frequência de cada caractere
- * @param table: A tabela do que contém as informações dos bit de Huffman
- * @return A quantidade de bits que não serão lidos no ultimo byte em inteiro
+ * @param frequency Array contendo as frequências dos bytes.
+ * @param table Tabela de códigos Huffman.
+ * @return Número de bits que não foram utilizados no último byte.
  */
 int tamanho_lixo(int frequency[], BitHuff table[]);
+
 /**
- * @brief Seta o primeiro byte do arquivo compactado
+ * @brief Escreve o cabeçalho no arquivo compactado.
  *
- * @param file: Um ponteiro para o arquivo compactado
- * @param trashsize: O tamanho do lixo
- * @param treeSize: O tamanho da árvore de Huffman
+ * Esta função escreve os dois primeiros bytes no arquivo compactado,
+ * que armazenam o tamanho do lixo e da árvore.
+ *
+ * @param file Ponteiro para o arquivo onde os dados serão escritos.
+ * @param trashSize Tamanho do lixo em bits.
+ * @param treeSize Tamanho da árvore de Huffman em bits.
  */
+void escrever_no_Cabecalho_Arquivo_compac(FILE *file, int trashSize, int treeSize);
 
-void escrever_no_Cabecalho_Arquivo_compac(FILE *file, int tamanho_lixo, int treeSize);
 /**
- * @brief Escreve o cabeçalho no arquivo compactado contendo o tamanho do lixo e o tamanho da árvore de Huffman
+ * @brief Escreve a estrutura da árvore de Huffman no arquivo compactado.
  *
- * O cabeçalho é composto por dois bytes. O primeiro byte armazena os 3 bits mais significativos
- * do tamanho do lixo e os 5 bits mais significativos do tamanho da árvore. O segundo byte armazena
- * os 8 bits restantes do tamanho da árvore.
+ * Esta função grava a estrutura da árvore de Huffman no arquivo,
+ * garantindo que ela possa ser reconstruída durante a descompressão.
  *
- * @param file: Um ponteiro para o arquivo compactado
- * @param tamanho_lixo: O número de bits de lixo no final dos dados compactados
- * @param treeSize: O tamanho da árvore de Huffman
+ * @param file Ponteiro para o arquivo onde a árvore será escrita.
+ * @param arvore_b Ponteiro para a raiz da árvore de Huffman.
  */
+void escrever_arvore(FILE *file, node_t *arvore_b);
 
-void escrever_arvore(FILE *file, node_t *bt);
 /**
- * @brief Setar os bytes com os novos bits correspondentes de cada caractere
+ * @brief Grava os códigos compactados no arquivo de saída.
  *
+ * Esta função lê o arquivo de entrada byte por byte, converte cada
+ * byte em seu código correspondente de Huffman e grava esses códigos
+ * compactados no arquivo de saída.
  *
- * @param fileIn: Ponteiro para o árquivo original
- * @param fileOut: Ponteiro para o arquivo compactado
- * @param table: A tabela do que contém as informações dos bit de Huffman
- * @param trashsize: O tamanho do lixo
+ * @param fileIn Ponteiro para o arquivo de entrada.
+ * @param fileOut Ponteiro para o arquivo de saída.
+ * @param table Tabela de códigos Huffman.
+ * @param trashSize Tamanho do lixo em bits.
  */
+void gravarCodigos(FILE *fileIn, FILE *fileOut, BitHuff table[], int trashSize);
 
-void gravarCodigos(FILE *fileIn, FILE *fileOut, BitHuff table[], int trashsize);
-
-#endif
+#endif // COMPRESSAO_H
