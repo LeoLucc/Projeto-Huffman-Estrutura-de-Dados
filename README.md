@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Projeto Huffman | Estrutura de Dados
 
 Projeto sobre o algoritmo de HUFFMAN da disciplina de Estrutura de Dados. 1º semestre(2024.1) do curso de Engenharia da Computação na UFAL: Universidade Federal de Alagoas.
@@ -28,13 +27,13 @@ O algoritmo de Huffman é uma técnica de compressão de dados sem perda que cri
 > 	git clone https://github.com/LeoLucc/Projeto-Huffman-Estrutura-de-Dados.git
 > ```
 >
-> Acesse a pasta do projeto seu terminal:
+> Acesse o diretório do projeto seu terminal:
 >
 > ```
 > 	cd [Nome da pasta onde você salvou]
 > ```
 >
-> Já na pasta da aplicação em seu terminal, digite o seguinte comando:
+> Já no diretório da aplicação em seu terminal, digite o seguinte comando:
 >
 > ```
 > 	gcc -Iinc src/arvore.c src/compressao.c src/descompressao.c src/lista.c src/main.c -o projeto_huffman
@@ -55,7 +54,4 @@ O algoritmo de Huffman é uma técnica de compressão de dados sem perda que cri
 * Compactar um arquivo
 * Descompactar o arquivo
 
-# Obrigado pela atenção!
-=======
-# Projeto-Huffman-Estrutura-de-Dados
->>>>>>> 94074f59c45e10384f28e81902a1daf98c209bf1
+# Obrigado!
