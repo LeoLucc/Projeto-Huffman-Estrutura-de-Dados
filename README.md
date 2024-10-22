@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Projeto Huffman | Estrutura de Dados
 
 Projeto sobre o algoritmo de HUFFMAN da disciplina de Estrutura de Dados. 1º semestre(2024.1) do curso de Engenharia da Computação na UFAL: Universidade Federal de Alagoas.
@@ -55,3 +56,6 @@ O algoritmo de Huffman é uma técnica de compressão de dados sem perda que cri
 * Descompactar o arquivo
 
 # Obrigado pela atenção!
+=======
+# Projeto-Huffman-Estrutura-de-Dados
+>>>>>>> 94074f59c45e10384f28e81902a1daf98c209bf1
