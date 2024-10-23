@@ -28,6 +28,8 @@ int main()
     printf(CYAN "  2 - " RESET "DESCOMPACTAR ARQUIVO\n");
 
     printf(BOLD YELLOW "\nOPCAOO: " RESET);
+
+    scanf("%d", &i);
     if (i == 1)
     {
 
