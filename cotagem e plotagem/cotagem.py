@@ -93,7 +93,7 @@ for size in sizes:
     search_counts_binary_tree = []
 
     for _ in range(100):  # Testar busca em 100 números aleatórios
-        chave = random.randint(0, 9999)
+        chave = 999999#random.randint(0, 9999)
         search_counts_linked_list.append(linked_list.search(chave))
         search_counts_binary_tree.append(binary_tree.search(chave))
 

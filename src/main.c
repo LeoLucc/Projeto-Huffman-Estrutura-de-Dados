@@ -38,7 +38,7 @@ int main()
         // colocar em tamanhoOriginal
 
         strcat(file_path, ".huff");
-        // Abre o arquivo para leitura
+        // Abre o arquivo para escritura dos bytes
         FILE *archiveOut = fopen(file_path, "wb");
 
         if (archiveOut == NULL)
