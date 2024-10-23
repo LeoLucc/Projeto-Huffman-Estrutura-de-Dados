@@ -19,6 +19,7 @@ node_t *arvoreHuff(node_t **head, int *tamLista)
         right = removeCabeca(head, tamLista);
 
         Pai = inserir_ord(head, left->freq + right->freq, '*', tamLista);
+        // Função da lista.c
         Pai->left = left;
         Pai->right = right;
     }

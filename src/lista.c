@@ -17,6 +17,9 @@ void *ponteiroparaVoid(unsigned char byte)
 
 node_t *removeCabeca(node_t **head, int *tamLista)
 {
+    // desrreferencia a cabeça atual, o próximo nó será a nova cabeça e o nó anterior será removido
+    // retorna o nó removido
+    // Utilizado na árvore
 
     node_t *atual = NULL;
     if (*head != NULL)
@@ -33,6 +36,7 @@ node_t *removeCabeca(node_t **head, int *tamLista)
 // função para inserir os nós ordenados na lista encadeada, de acordo com a frequência
 node_t *inserir_ord(node_t **head, int freq, char byte, int *tamLista)
 { // recebe a cabeça da lista encadeada, a frequência que aparece o caractere e o caractere
+    // insere o nó pai "*"
 
     node_t *novo = (node_t *)malloc(sizeof(node_t)); // cria um ponteiro do tipo nó e aloca dinamicamente na memória o espaço de um nó;
     novo->freq = freq;                               // atualiza a variável freq do nó nomeado novo, com o valor recebido na entrada da função de inserir
@@ -119,6 +123,7 @@ unsigned char recuperarByteDePonteiroVoid(void *byte)
 
 node_t *criarNo(void *byte, int frequency)
 {
+    // Utilizada na descompressão para armazenar os bytes lidos e inserir na árvore de huffman
     node_t *newNode = (node_t *)malloc(sizeof(node_t));
     newNode->prox = NULL;
     newNode->left = NULL;
