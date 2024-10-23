@@ -7,15 +7,27 @@
 
 #define MAX 100
 
+#define RESET "\033[0m"
+#define RED "\033[31m"
+#define GREEN "\033[32m"
+#define YELLOW "\033[33m"
+#define CYAN "\033[36m"
+#define BOLD "\033[1m"
+
 int main()
 {
     int i;
-    printf("SEJA BEM VINDO A CODIFICAÇÃO DE HUFFMAN\n");
-    printf("SELECIONE UMA DAS OPÇÕES A SEGUIR:\n");
-    printf("1 - COMPACTAR ARQUIVO\n");
-    printf("2 - DESCOMPACTAR ARQUIVO\n");
-    printf("OPÇÃO: ");
-    scanf("%d", &i);
+
+    printf(GREEN BOLD "*************\n" RESET);
+    printf(GREEN BOLD "*       " CYAN "SEJA BEM VINDO A" RESET GREEN "        *\n");
+    printf(GREEN BOLD "*    " CYAN "COMPACTACAO DE HUFFMAN" RESET GREEN "    *\n");
+    printf(GREEN BOLD "*************\n" RESET);
+    printf(YELLOW BOLD "SELECIONE UMA DAS OPCOES A SEGUIR:\n" RESET);
+
+    printf(CYAN "  1 - " RESET "COMPACTAR ARQUIVO\n");
+    printf(CYAN "  2 - " RESET "DESCOMPACTAR ARQUIVO\n");
+
+    printf(BOLD YELLOW "\nOPCAOO: " RESET);
     if (i == 1)
     {
 
