@@ -231,9 +231,6 @@ void gravarCodigos(FILE *fileIn, FILE *fileOut, BitHuff table[], int trashSize)
     // Isso acontece quando o arquivo termina mas o acumulador não chegou a 8 bits completos.
     if (tamanho_acumulador > 0)
     {
-        // Desloca os bits restantes à esquerda para preencher com zeros à direita, completando o byte.
-        acumulador_bits <<= (8 - tamanho_acumulador);
-
         // Adiciona o "lixo" (bits extras que não fazem parte dos dados) ao final do último byte.
         // O 'trashSize' indica quantos desses bits finais são irrelevantes para a informação, necessários para completar o último byte.
         acumulador_bits <<= trashSize;

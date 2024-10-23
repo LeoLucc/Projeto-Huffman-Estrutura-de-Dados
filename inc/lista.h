@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "lista.h"
+
 typedef struct node
 {
   char byte;          // Caractere do arquivo que será compactado/descompactado
@@ -80,7 +80,7 @@ node_t *listFreq(FILE *arq, int frequencias[256], int *tamLista);
  * @param byte Ponteiro para o nó que contém o byte.
  * @return Retorna o byte recuperado.
  */
-unsigned char recuperarByteDePonteiroVoid(node_t *byte);
+unsigned char recuperarByteDePonteiroVoid(void *byte);
 
 /**
  * @brief Cria um novo nó.

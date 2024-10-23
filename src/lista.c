@@ -111,11 +111,9 @@ node_t *listFreq(FILE *arq, int frequencias[256], int *tamLista)
     return lista; // retorna a cabeça da lista encadeada contendo os caracteres e suas frequências
 }
 
-/* Área restrita */
-
-unsigned char recuperarByteDePonteiroVoid(node_t *byte)
+unsigned char recuperarByteDePonteiroVoid(void *byte)
 {
-    unsigned char *item = (unsigned char *)byte;
+    unsigned char *item = &((node_t *)byte)->byte;
     return *item;
 }
 
